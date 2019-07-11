@@ -3,6 +3,7 @@ package com.yangxundi.hellword;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
-
+    private static final String TAG = "MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 tv1.setText("The first words!");
+                Log.d(TAG, "1");
             }
         });
 
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 pgb1.setVisibility(View.VISIBLE);
                 tv1.setText("THANK YOU!");
+                Log.d(TAG, "2");
             }
         });
     }
